@@ -3,32 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio & Lab Reflections</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
-        <h1>Hello, I'm Vaishnavu Tiwari 👋</h1>
+        <h1>Hello, I'm Vaishnavi Tiwari 👋</h1>
         <p>I am passionate about technology and problem-solving. Here's a glimpse of my work:</p>
     </header>
 
     <section>
         <h2>🛠 Projects</h2>
         <ul>
-            <li><strong>Project 1</strong>:Urea dispensing machine:
-      It stores and dispenses urea fertilizer in liquid or granular form, ensuring precise application for improved crop yield and reduced waste.
-.</li>
-            <li><strong>Project 2</strong>:Smart gloves to overcome communication barrier:</strong>:  It translate sign language gestures into speech or text, enabling deaf and mute individuals to communicate easily with others.
-
-  .</li>
+            <li><strong>Project 1:</strong> Urea dispensing machine: It stores and dispenses urea fertilizer in liquid or granular form, ensuring precise application for improved crop yield and reduced waste.</li>
+            <li><strong>Project 2:</strong> Smart gloves to overcome communication barrier: It translates sign language gestures into speech or text, enabling deaf and mute individuals to communicate easily with others.</li>
         </ul>
 
         <h2>🚀 Skills</h2>
         <ul>
-            <li>C,C++,Python</li>
-            <li>Data structures</li>
-            <li>Design analysis and algorithms</li>
+            <li>C, C++, Python</li>
+            <li>Data Structures</li>
+            <li>Design Analysis and Algorithms</li>
         </ul>
 
         <h2>🌐 Find Me Online</h2>
@@ -46,13 +43,13 @@
             <dd>24ECAC203</dd>
 
             <dt>Name</dt>
-            <dd> Vaishnavi Tiwari</dd>
+            <dd>Vaishnavi Tiwari</dd>
 
             <dt>SRN</dt>
-            <dd> 01fe23bci086</dd>
+            <dd>01fe23bci086</dd>
 
             <dt>Course Instructor</dt>
-            <dd> Mr. K M M Rajashekharaiah sir</dd>
+            <dd>Mr. K M M Rajashekharaiah sir</dd>
 
             <dt>University</dt>
             <dd>KLE Technological University, Hubballi</dd>
@@ -62,13 +59,68 @@
         </dl>
 
         <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
+        
+        <!-- Button for toggling lab reflections -->
+        <button onclick="toggleReflection()">View Lab Reflections</button>
+        
+        <div class="reflection-content" id="reflection">
+            <h2>📝 Reflection on Learning Data Structures and Algorithms</h2>
+            
+            <section>
+                <h3>Key Concepts Learned</h3>
+                <ul>
+                    <li><strong>Time Complexity Analysis:</strong> Understanding algorithm efficiency using Big-O notation.</li>
+                    <li><strong>Binary Search Tree (BST):</strong> Efficient search and insertion in logarithmic time.</li>
+                    <li><strong>DFS and BFS:</strong> Traversal techniques for exploring graphs.</li>
+                    <li><strong>Heap Sorting:</strong> Sorting data efficiently using heaps.</li>
+                    <li><strong>Pattern Searching:</strong> Algorithms like KMP for substring searches.</li>
+                    <li><strong>Graph Algorithms:</strong> Techniques for shortest paths and minimum spanning trees.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Challenges Faced</h3>
+                <ul>
+                    <li><strong>Recursive Algorithms:</strong> Managing stack overflow in graph traversals.</li>
+                    <li><strong>Memory Management:</strong> Efficient space utilization in sorting and graph algorithms.</li>
+                    <li><strong>Balancing Efficiency with Clarity:</strong> Writing clear and optimized code.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Real-World Applications</h3>
+                <ul>
+                    <li><strong>Scalability:</strong> Handling massive datasets efficiently.</li>
+                    <li><strong>Concurrency:</strong> Implementing parallel and distributed algorithms.</li>
+                    <li><strong>Dynamic Data:</strong> Adjusting algorithms for real-time data processing.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Approach to Solving Complex Problems</h3>
+                <ul>
+                    <li><strong>Optimize Time and Space:</strong> Prioritize efficiency without compromising clarity.</li>
+                    <li><strong>Use Advanced Data Structures:</strong> Employ structures like heaps, trees, and priority queues.</li>
+                    <li><strong>Iterative Refinement:</strong> Start with brute force, then optimize iteratively.</li>
+                </ul>
+            </section>
+
+            <footer>
+                <p>Reflecting on this journey, I feel more confident in tackling complex computational challenges and applying these concepts in real-world scenarios.</p>
+            </footer>
+        </div>
     </section>
-</body>
-</html>
-    
-    <!-- Link to the Reflection Page -->
-    <a href="lab_reflections.html" target="_blank">
-        <button>Go to Lab Reflections</button>
-    </a>
+
+    <script>
+        function toggleReflection() {
+            var reflection = document.getElementById("reflection");
+            if (reflection.style.display === "none" || reflection.style.display === "") {
+                reflection.style.display = "block";
+            } else {
+                reflection.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>

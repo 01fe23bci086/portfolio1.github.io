@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -58,6 +60,7 @@
         <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
     </section>
 
+    <!-- Course Description Section -->
     <section>
         <h2>📚 About this Course: Design Analysis and Algorithm</h2>
         <p>The <strong>Design Analysis and Algorithm</strong> course focuses on developing a solid foundation in designing, analyzing, and implementing algorithms to solve computational problems efficiently. It covers the essential techniques for optimizing algorithm performance with an emphasis on time and space complexity analysis.</p>
@@ -78,10 +81,10 @@
     </section>
 
     <!-- Button to Display Reflections -->
-    <button id="reflectionBtn" style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">View Lab Reflections</button>
+    <button id="reflectionBtn">View Lab Reflections</button>
     
     <!-- Reflection Section -->
-    <section id="reflectionContent" style="display: none;">
+    <section id="reflectionContent" style="display:none;">
         <h2>📖 Reflection on Learning Data Structures and Algorithms</h2>
         <p>Throughout this course, I delved deep into fundamental data structures and algorithms, which are the backbone of efficient computing. Key topics I explored include <strong>Time Complexity Analysis</strong>, <strong>Binary Search Trees (BST)</strong>, <strong>DFS and BFS</strong>, <strong>Heap Sorting</strong>, <strong>Pattern Searching</strong>, and <strong>Graph Algorithms</strong>. Here's a reflection on what I learned, the challenges I faced, and how I approached solving complex problems.</p>
 
@@ -191,16 +194,34 @@ def insert(root, key):
     <section class="challenges">
         <h2>Challenges in Learning and Understanding</h2>
         <p>Grasping the concepts of Time Complexity, DFS/BFS, and Pattern Searching required patience and practice, as well as understanding the underlying recursive nature of many algorithms. Heap Sort and Graph Algorithms were also difficult to implement initially due to their complexity and optimization techniques.</p>
+        <h3>Additional Challenges:</h3>
+        <ul>
+            <li><strong>Recursion in DFS and BFS:</strong> Recursion can sometimes be difficult to manage, especially in larger graphs where stack overflow can occur if not handled properly.</li>
+            <li><strong>Memory Management:</strong> In algorithms like Heap Sort and Graph Algorithms, efficiently managing memory and understanding the space complexity of the solution was often a challenge.</li>
+            <li><strong>Balancing Efficiency with Clarity:</strong> While implementing algorithms, there was a constant balance between writing code that is both efficient and easy to understand.</li>
+        </ul>
     </section>
 
     <section class="real-world">
         <h2>Challenges in Relating to Real-World Applications</h2>
         <p>Time Complexity is theoretical, and applying it to real-world systems can sometimes be inaccurate due to factors like input size and hardware limitations. For algorithms like Graph Traversal and Heap Sorting, the scale of data in real-world applications requires additional optimizations to manage performance.</p>
+        <h3>Additional Real-World Challenges:</h3>
+        <ul>
+            <li><strong>Scalability:</strong> While algorithms like BFS and DFS work well for small datasets, handling large-scale real-world data (e.g., social networks or traffic systems) requires more sophisticated methods.</li>
+            <li><strong>Concurrency:</strong> Many real-world systems require parallel or distributed computing, which complicates the implementation of algorithms like Dijkstra's and Prim's.</li>
+            <li><strong>Dynamic Data:</strong> Algorithms need to be adjusted to handle constantly changing, real-time data, like stock market trends or live social media feeds.</li>
+        </ul>
     </section>
 
     <section class="approach">
         <h2>Approach to Solving Complex Problems</h2>
         <p>When solving complex problems, I analyze the problem, select the most appropriate algorithm based on time complexity, and continuously optimize the solution. Testing edge cases ensures robustness, and real-world benchmarking validates the performance of the solution.</p>
+        <h3>Efficient Approaches:</h3>
+        <ul>
+            <li><strong>Optimizing for Time and Space:</strong> I always ensure that the algorithm selected is optimal for both time and space. For instance, in pattern searching, choosing algorithms like KMP over brute force saves significant time on large inputs.</li>
+            <li><strong>Using Advanced Data Structures:</strong> In cases like Graph Algorithms, using data structures such as priority queues and disjoint sets can greatly improve the efficiency of algorithms.</li>
+            <li><strong>Iterative Improvements:</strong> I often start with a brute force solution and iteratively improve the approach by reducing time complexity through dynamic programming, memoization, or advanced algorithmic techniques.</li>
+        </ul>
     </section>
 
     <footer>

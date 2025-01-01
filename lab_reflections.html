@@ -3,126 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reflection on Data Structures and Algorithms</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Lab Reflections</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Additional Styles for Button and Content Toggle */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
         .container {
-            display: none; /* Initially hide the content */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        .btn-toggle {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        h1 {
             text-align: center;
+            color: #4CAF50;
         }
 
-        .btn-toggle:hover {
-            background-color: #388E3C;
+        h2 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #888;
         }
     </style>
-    <script>
-        // Toggle visibility of the content
-        function toggleContent() {
-            const container = document.querySelector('.container');
-            container.style.display = container.style.display === 'none' ? 'block' : 'none';
-        }
-    </script>
 </head>
 <body>
-    <!-- Button to Toggle Content -->
-    <button class="btn-toggle" onclick="toggleContent()">Lab Reflections</button>
-
-    <!-- Hidden Content -->
     <div class="container">
-        <header>
-            <h1>Reflection on Learning Data Structures and Algorithms</h1>
-        </header>
+        <h1>📝 Reflection on Data Structures and Algorithms</h1>
         
-        <section class="intro">
-            <p>Throughout this course, I delved deep into fundamental data structures and algorithms, which are the backbone of efficient computing. Key topics I explored include <strong>Time Complexity Analysis</strong>, <strong>Binary Search Trees (BST)</strong>, <strong>DFS and BFS</strong>, <strong>Heap Sorting</strong>, <strong>Pattern Searching</strong>, and <strong>Graph Algorithms</strong>. Here's a reflection on what I learned, the challenges I faced, and how I approached solving complex problems.</p>
-        </section>
-        
-        <section class="concepts">
+        <section>
             <h2>Key Concepts Learned</h2>
-            <h3>1. Time Complexity Analysis</h3>
-            <p>Time complexity analysis is essential for determining the efficiency of algorithms...</p>
-            <pre><code>def bubble_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]</code></pre>
-
-            <h3>2. Binary Search Tree (BST)</h3>
-            <p>I gained a strong understanding of how <strong>BSTs</strong> allow efficient insertion...</p>
-            <pre><code>class Node:
-    def __init__(self, key):
-        self.left = None
-        self.right = None
-        self.value = key
-
-def insert(root, key):
-    if root is None:
-        return Node(key)
-    if key < root.value:
-        root.left = insert(root.left, key)
-    else:
-        root.right = insert(root.right, key)
-    return root</code></pre>
-
-            <h3>3. DFS and BFS</h3>
-            <p><strong>DFS</strong> is useful for exploring paths deeply...</p>
-            <pre><code>def dfs(graph, node, visited):
-    if node not in visited:
-        print(node, end=" ")
-        visited.add(node)
-        for neighbor in graph[node]:
-            dfs(graph, neighbor, visited)</code></pre>
-        </section>
-
-        <section class="challenges">
-            <h2>Challenges in Learning and Understanding</h2>
-            <p>Grasping the concepts of Time Complexity, DFS/BFS, and Pattern Searching required patience...</p>
-            <h3>Additional Challenges:</h3>
             <ul>
-                <li><strong>Recursion in DFS and BFS:</strong> Recursion can sometimes be difficult...</li>
-                <li><strong>Memory Management:</strong> In algorithms like Heap Sort...</li>
-                <li><strong>Balancing Efficiency with Clarity:</strong> While implementing algorithms...</li>
+                <li><strong>Time Complexity Analysis:</strong> Understanding algorithm efficiency using Big-O notation.</li>
+                <li><strong>Binary Search Tree (BST):</strong> Efficient search and insertion in logarithmic time.</li>
+                <li><strong>DFS and BFS:</strong> Traversal techniques for exploring graphs.</li>
+                <li><strong>Heap Sorting:</strong> Sorting data efficiently using heaps.</li>
+                <li><strong>Pattern Searching:</strong> Algorithms like KMP for substring searches.</li>
+                <li><strong>Graph Algorithms:</strong> Techniques for shortest paths and minimum spanning trees.</li>
             </ul>
         </section>
 
-        <section class="real-world">
-            <h2>Challenges in Relating to Real-World Applications</h2>
-            <p>Time Complexity is theoretical, and applying it to real-world systems...</p>
-            <h3>Additional Real-World Challenges:</h3>
+        <section>
+            <h2>Challenges Faced</h2>
+            <p>Grasping recursion, memory management, and balancing efficiency with clarity were some challenging aspects of this course.</p>
             <ul>
-                <li><strong>Scalability:</strong> While algorithms like BFS and DFS work well...</li>
-                <li><strong>Concurrency:</strong> Many real-world systems require parallel...</li>
-                <li><strong>Dynamic Data:</strong> Algorithms need to be adjusted...</li>
+                <li><strong>Recursive Algorithms:</strong> Managing stack overflow in graph traversals.</li>
+                <li><strong>Memory Management:</strong> Efficient space utilization in sorting and graph algorithms.</li>
+                <li><strong>Balancing Efficiency with Clarity:</strong> Writing clear and optimized code.</li>
             </ul>
         </section>
 
-        <section class="approach">
+        <section>
+            <h2>Real-World Applications</h2>
+            <p>Applying these concepts in large-scale applications requires scalability, concurrency, and adaptability to dynamic data.</p>
+            <ul>
+                <li><strong>Scalability:</strong> Handling massive datasets efficiently.</li>
+                <li><strong>Concurrency:</strong> Implementing parallel and distributed algorithms.</li>
+                <li><strong>Dynamic Data:</strong> Adjusting algorithms for real-time data processing.</li>
+            </ul>
+        </section>
+
+        <section>
             <h2>Approach to Solving Complex Problems</h2>
-            <p>When solving complex problems, I analyze the problem...</p>
-            <h3>Efficient Approaches:</h3>
+            <p>Analyzing problems thoroughly, choosing efficient algorithms, and continuously optimizing solutions have been my key strategies.</p>
             <ul>
-                <li><strong>Optimizing for Time and Space:</strong> I always ensure...</li>
-                <li><strong>Using Advanced Data Structures:</strong> In cases like Graph Algorithms...</li>
-                <li><strong>Iterative Improvements:</strong> I often start with a brute force...</li>
+                <li><strong>Optimize Time and Space:</strong> Prioritize efficiency without compromising clarity.</li>
+                <li><strong>Use Advanced Data Structures:</strong> Employ structures like heaps, trees, and priority queues.</li>
+                <li><strong>Iterative Refinement:</strong> Start with brute force, then optimize iteratively.</li>
             </ul>
         </section>
 
         <footer>
-            <p>Through this course, I gained a deeper understanding of data structures and algorithms...</p>
+            <p>Reflecting on this journey, I feel more confident in tackling complex computational challenges and applying these concepts in real-world scenarios.</p>
         </footer>
     </div>
 </body>

@@ -3,45 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reflection on Data Structures and Algorithms</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Reflection on Learning Data Structures and Algorithms</h1>
-        </header>
-        
-        <!-- Lab Reflections Button -->
-        <button id="toggleButton" class="toggle-btn">Show Lab Reflections</button>
-        
-        <!-- Reflection Content -->
-        <div id="reflectionContent" class="reflection-content">
-            <section class="intro">
-                <p>Throughout this course, I delved deep into fundamental data structures and algorithms...</p>
-            </section>
-            <section class="concepts">
-                <h2>Key Concepts Learned</h2>
-                <!-- Your reflection content here -->
-            </section>
-            <section class="challenges">
-                <h2>Challenges in Learning and Understanding</h2>
-                <!-- Your challenges content here -->
-            </section>
-            <section class="real-world">
-                <h2>Challenges in Relating to Real-World Applications</h2>
-                <!-- Your real-world content here -->
-            </section>
-            <section class="approach">
-                <h2>Approach to Solving Complex Problems</h2>
-                <!-- Your approach content here -->
-            </section>
-        </div>
-        
-        <footer>
-            <p>Through this course, I gained a deeper understanding of data structures and algorithms...</p>
-        </footer>
-    </div>
+    <header>
+        <h1>Hello, I'm Vaishnavi Tiwari 👋</h1>
+        <p>I am passionate about technology and problem-solving. Here's a glimpse of my work:</p>
+    </header>
+
+    <section>
+        <h2>🛠️ Projects</h2>
+        <ul>
+            <li><strong>Project 1</strong>: Urea dispensing machine</li>
+            <li><strong>Project 2</strong>: Smart gloves to overcome communication barriers</li>
+        </ul>
+
+        <h2>🚀 Skills</h2>
+        <ul>
+            <li>C, C++, Python</li>
+            <li>Data Structures</li>
+            <li>Design Analysis and Algorithms</li>
+        </ul>
+
+        <h2>🌐 Find Me Online</h2>
+        <ul>
+            <li><a href="https://github.com/your-github-01fe23bci086" target="_blank">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/vaishnavi-tiwari-541079296" target="_blank">LinkedIn</a></li>
+        </ul>
+
+        <h2>📝 Reflections</h2>
+        <p>
+            <a href="reflection.html">
+                <button class="toggle-btn">View Lab Reflections</button>
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        <p>Thank you for visiting my portfolio!</p>
+    </footer>
 </body>
 </html>

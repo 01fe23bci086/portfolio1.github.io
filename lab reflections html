@@ -3,46 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Reflection on Data Structures and Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Hello, I'm Vaishnavi Tiwari 👋</h1>
-        <p>I am passionate about technology and problem-solving. Here's a glimpse of my work:</p>
-    </header>
-
-    <section>
-        <h2>🛠️ Projects</h2>
-        <ul>
-            <li><strong>Project 1</strong>: Urea dispensing machine</li>
-            <li><strong>Project 2</strong>: Smart gloves to overcome communication barriers</li>
-        </ul>
-
-        <h2>🚀 Skills</h2>
-        <ul>
-            <li>C, C++, Python</li>
-            <li>Data Structures</li>
-            <li>Design Analysis and Algorithms</li>
-        </ul>
-
-        <h2>🌐 Find Me Online</h2>
-        <ul>
-            <li><a href="https://github.com/your-github-01fe23bci086" target="_blank">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/vaishnavi-tiwari-541079296" target="_blank">LinkedIn</a></li>
-        </ul>
-
-        <h2>📝 Reflections</h2>
-        <p>
-            <a href="reflection.html">
-                <button class="toggle-btn">View Lab Reflections</button>
+    <div class="container">
+        <header>
+            <h1>Reflection on Learning Data Structures and Algorithms</h1>
+            <!-- Lab Reflection Button -->
+            <a href="lab_reflection.html">
+                <button class="toggle-btn">Lab Reflection</button>
             </a>
-        </p>
-    </section>
+        </header>
+        
+        <section class="intro">
+            <p>Throughout this course, I delved deep into fundamental data structures and algorithms, which are the backbone of efficient computing. Key topics I explored include <strong>Time Complexity Analysis</strong>, <strong>Binary Search Trees (BST)</strong>, <strong>DFS and BFS</strong>, <strong>Heap Sorting</strong>, <strong>Pattern Searching</strong>, and <strong>Graph Algorithms</strong>. Here's a reflection on what I learned, the challenges I faced, and how I approached solving complex problems.</p>
+        </section>
+        
+        <section class="concepts">
+            <h2>Key Concepts Learned</h2>
+            <h3>1. Time Complexity Analysis</h3>
+            <p>Time complexity analysis is essential for determining the efficiency of algorithms...</p>
+            <pre><code>def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]</code></pre>
+        </section>
 
-    <footer>
-        <p>Thank you for visiting my portfolio!</p>
-    </footer>
+        <section class="challenges">
+            <h2>Challenges in Learning and Understanding</h2>
+            <p>Grasping the concepts of Time Complexity, DFS/BFS, and Pattern Searching required patience...</p>
+        </section>
+
+        <section class="real-world">
+            <h2>Challenges in Relating to Real-World Applications</h2>
+            <p>Time Complexity is theoretical, and applying it to real-world systems can sometimes be inaccurate...</p>
+        </section>
+
+        <section class="approach">
+            <h2>Approach to Solving Complex Problems</h2>
+            <p>When solving complex problems, I analyze the problem, select the most appropriate algorithm...</p>
+        </section>
+
+        <footer>
+            <p>Through this course, I gained a deeper understanding of data structures and algorithms...</p>
+        </footer>
+    </div>
 </body>
 </html>

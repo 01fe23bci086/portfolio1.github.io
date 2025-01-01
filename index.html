@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -60,7 +58,6 @@
         <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
     </section>
 
-    <!-- Course Description Section -->
     <section>
         <h2>📚 About this Course: Design Analysis and Algorithm</h2>
         <p>The <strong>Design Analysis and Algorithm</strong> course focuses on developing a solid foundation in designing, analyzing, and implementing algorithms to solve computational problems efficiently. It covers the essential techniques for optimizing algorithm performance with an emphasis on time and space complexity analysis.</p>
@@ -81,10 +78,10 @@
     </section>
 
     <!-- Button to Display Reflections -->
-    <button id="reflectionBtn">View Lab Reflections</button>
+    <button id="reflectionBtn" style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">View Lab Reflections</button>
     
     <!-- Reflection Section -->
-    <section id="reflectionContent" style="display:none;">
+    <section id="reflectionContent" style="display: none;">
         <h2>📖 Reflection on Learning Data Structures and Algorithms</h2>
         <p>Throughout this course, I delved deep into fundamental data structures and algorithms, which are the backbone of efficient computing. Key topics I explored include <strong>Time Complexity Analysis</strong>, <strong>Binary Search Trees (BST)</strong>, <strong>DFS and BFS</strong>, <strong>Heap Sorting</strong>, <strong>Pattern Searching</strong>, and <strong>Graph Algorithms</strong>. Here's a reflection on what I learned, the challenges I faced, and how I approached solving complex problems.</p>
 
@@ -166,73 +163,46 @@ def insert(root, key):
                 i += 1</code></pre>
 
         <h4>6. Graph Algorithms</h4>
-        <p>I learned the importance of <strong>graphs</strong> in representing real-world relationships, such as social networks and transportation systems. Key algorithms like <strong>Dijkstra’s Algorithm</strong> for shortest path finding and <strong>Prim’s Algorithm</strong> for minimum spanning trees helped me understand the complexities involved in graph-based problems.</p>
+        <p>I learned the importance of <strong>graphs</strong> in representing real-world relationships, such as in social networks or transport systems. Implementing algorithms like <strong>Dijkstra's</strong> and <strong>Prim's</strong> for shortest paths and minimum spanning trees, respectively, was a rewarding challenge.</p>
 
-        <pre><code>def dijkstra(graph, start):
-    shortest_paths = {start: (None, 0)}
-    current_node = start
-    while current_node is not None:
-        weight = shortest_paths[current_node][1]
-        for neighbor, w in graph[current_node].items():
-            path_weight = weight + w
-            if neighbor not in shortest_paths:
-                shortest_paths[neighbor] = (current_node, path_weight)
-            else:
-                current_weight = shortest_paths[neighbor][1]
-                if current_weight > path_weight:
-                    shortest_paths[neighbor] = (current_node, path_weight)
-        next_dest = None
-        smallest_weight = float('inf')
-        for node, paths in shortest_paths.items():
-            if paths[1] < smallest_weight:
-                smallest_weight = paths[1]
-                next_dest = node
-        current_node = next_dest
-    return shortest_paths</code></pre>
+        <pre><code>import heapq
+
+def dijkstra(graph, start):
+    distances = {vertex: float('infinity') for vertex in graph}
+    distances[start] = 0
+    priority_queue = [(0, start)]
+
+    while priority_queue:
+        current_distance, current_vertex = heapq.heappop(priority_queue)
+
+        for neighbor, weight in graph[current_vertex].items():
+            distance = current_distance + weight
+            if distance < distances[neighbor]:
+                distances[neighbor] = distance
+                heapq.heappush(priority_queue, (distance, neighbor))
+
+    return distances</code></pre>
+
+        <h3>Challenges Faced</h3>
+        <p>One of the biggest challenges was understanding the time and space complexities associated with each algorithm. For example, sorting algorithms like MergeSort require careful handling of memory allocation, and understanding recursive calls in depth-first search was tricky but rewarding once I understood the underlying mechanism.</p>
+
+        <h3>Approach and Strategy</h3>
+        <p>My approach involved a balance of theory and practical implementation. After understanding the theoretical foundations, I would try to implement each algorithm from scratch, and debug my code thoroughly. Working on different problems helped me consolidate my understanding and improve my problem-solving skills.</p>
     </section>
-
-    <section class="challenges">
-        <h2>Challenges in Learning and Understanding</h2>
-        <p>Grasping the concepts of Time Complexity, DFS/BFS, and Pattern Searching required patience and practice, as well as understanding the underlying recursive nature of many algorithms. Heap Sort and Graph Algorithms were also difficult to implement initially due to their complexity and optimization techniques.</p>
-        <h3>Additional Challenges:</h3>
-        <ul>
-            <li><strong>Recursion in DFS and BFS:</strong> Recursion can sometimes be difficult to manage, especially in larger graphs where stack overflow can occur if not handled properly.</li>
-            <li><strong>Memory Management:</strong> In algorithms like Heap Sort and Graph Algorithms, efficiently managing memory and understanding the space complexity of the solution was often a challenge.</li>
-            <li><strong>Balancing Efficiency with Clarity:</strong> While implementing algorithms, there was a constant balance between writing code that is both efficient and easy to understand.</li>
-        </ul>
-    </section>
-
-    <section class="real-world">
-        <h2>Challenges in Relating to Real-World Applications</h2>
-        <p>Time Complexity is theoretical, and applying it to real-world systems can sometimes be inaccurate due to factors like input size and hardware limitations. For algorithms like Graph Traversal and Heap Sorting, the scale of data in real-world applications requires additional optimizations to manage performance.</p>
-        <h3>Additional Real-World Challenges:</h3>
-        <ul>
-            <li><strong>Scalability:</strong> While algorithms like BFS and DFS work well for small datasets, handling large-scale real-world data (e.g., social networks or traffic systems) requires more sophisticated methods.</li>
-            <li><strong>Concurrency:</strong> Many real-world systems require parallel or distributed computing, which complicates the implementation of algorithms like Dijkstra's and Prim's.</li>
-            <li><strong>Dynamic Data:</strong> Algorithms need to be adjusted to handle constantly changing, real-time data, like stock market trends or live social media feeds.</li>
-        </ul>
-    </section>
-
-    <section class="approach">
-        <h2>Approach to Solving Complex Problems</h2>
-        <p>When solving complex problems, I analyze the problem, select the most appropriate algorithm based on time complexity, and continuously optimize the solution. Testing edge cases ensures robustness, and real-world benchmarking validates the performance of the solution.</p>
-        <h3>Efficient Approaches:</h3>
-        <ul>
-            <li><strong>Optimizing for Time and Space:</strong> I always ensure that the algorithm selected is optimal for both time and space. For instance, in pattern searching, choosing algorithms like KMP over brute force saves significant time on large inputs.</li>
-            <li><strong>Using Advanced Data Structures:</strong> In cases like Graph Algorithms, using data structures such as priority queues and disjoint sets can greatly improve the efficiency of algorithms.</li>
-            <li><strong>Iterative Improvements:</strong> I often start with a brute force solution and iteratively improve the approach by reducing time complexity through dynamic programming, memoization, or advanced algorithmic techniques.</li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>Through this course, I gained a deeper understanding of data structures and algorithms, and I am now better equipped to solve real-world computational problems with efficiency and precision.</p>
-    </footer>
 
     <script>
-        document.getElementById("reflectionBtn").onclick = function() {
-            var content = document.getElementById("reflectionContent");
-            content.style.display = content.style.display === "none" ? "block" : "none";
-        }
+        const reflectionBtn = document.getElementById('reflectionBtn');
+        const reflectionContent = document.getElementById('reflectionContent');
+
+        reflectionBtn.addEventListener('click', () => {
+            if (reflectionContent.style.display === 'none') {
+                reflectionContent.style.display = 'block';
+                reflectionBtn.textContent = 'Hide Lab Reflections';
+            } else {
+                reflectionContent.style.display = 'none';
+                reflectionBtn.textContent = 'View Lab Reflections';
+            }
+        });
     </script>
 </body>
 </html>

@@ -6,6 +6,56 @@
     <title>Portfolio & Lab Reflections</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Styles for the Button */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        /* Reflection Section Styles */
+        .reflection-content {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+        }
+
+        .reflection-content h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .reflection-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .reflection-content ul li {
+            margin-bottom: 10px;
+        }
+
+        .reflection-content pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -60,9 +110,10 @@
 
         <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
         
-        <!-- Button for toggling lab reflections -->
+        <!-- Attractive Button for toggling lab reflections -->
         <button onclick="toggleReflection()">View Lab Reflections</button>
         
+        <!-- Lab Reflections Content -->
         <div class="reflection-content" id="reflection">
             <h2>📝 Reflection on Learning Data Structures and Algorithms</h2>
             

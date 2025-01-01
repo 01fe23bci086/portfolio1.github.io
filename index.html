@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio & Lab Reflections</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
         <h1>Hello, I'm Vaishnavi Tiwari 👋</h1>
         <p>I am passionate about technology and problem-solving. Here's a glimpse of my work:</p>
@@ -17,15 +16,15 @@
     <section>
         <h2>🛠 Projects</h2>
         <ul>
-            <li><strong>Project 1:</strong> Urea dispensing machine: It stores and dispenses urea fertilizer in liquid or granular form, ensuring precise application for improved crop yield and reduced waste.</li>
-            <li><strong>Project 2:</strong> Smart gloves to overcome communication barrier: It translates sign language gestures into speech or text, enabling deaf and mute individuals to communicate easily with others.</li>
+            <li><strong>Project 1</strong>: Urea dispensing machine - It stores and dispenses urea fertilizer in liquid or granular form, ensuring precise application for improved crop yield and reduced waste.</li>
+            <li><strong>Project 2</strong>: Smart gloves to overcome communication barriers - It translates sign language gestures into speech or text, enabling deaf and mute individuals to communicate easily with others.</li>
         </ul>
 
         <h2>🚀 Skills</h2>
         <ul>
             <li>C, C++, Python</li>
-            <li>Data Structures</li>
-            <li>Design Analysis and Algorithms</li>
+            <li>Data structures</li>
+            <li>Design analysis and algorithms</li>
         </ul>
 
         <h2>🌐 Find Me Online</h2>
@@ -59,33 +58,51 @@
         </dl>
 
         <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
+    </section>
+
+    <!-- Course Description Section -->
+    <section>
+        <h2>📚 About this Course: Design Analysis and Algorithm</h2>
+        <p>The <strong>Design Analysis and Algorithm</strong> course focuses on developing a solid foundation in designing, analyzing, and implementing algorithms to solve computational problems efficiently. It covers the essential techniques for optimizing algorithm performance with an emphasis on time and space complexity analysis.</p>
         
-        <!-- Attractive Button for toggling lab reflections -->
-        <button onclick="toggleReflection()">View Lab Reflections</button>
+        <h3>Key Topics Covered:</h3>
+        <ul>
+            <li><strong>Time and Space Complexity:</strong> Learn to evaluate and compare algorithms using Big-O notation.</li>
+            <li><strong>Sorting and Searching Algorithms:</strong> Study fundamental algorithms like QuickSort, MergeSort, and Binary Search.</li>
+            <li><strong>Divide and Conquer:</strong> Solve problems by breaking them into smaller subproblems, such as matrix multiplication.</li>
+            <li><strong>Dynamic Programming:</strong> Learn optimization techniques like the Knapsack problem and Fibonacci sequence.</li>
+            <li><strong>Greedy Algorithms:</strong> Solve problems by making locally optimal choices, such as activity selection.</li>
+            <li><strong>Graph Algorithms:</strong> Explore algorithms for graph-related problems, including DFS, BFS, Dijkstra’s, and Prim’s.</li>
+            <li><strong>NP-Completeness:</strong> Understand computationally hard problems and their significance.</li>
+        </ul>
         
-        <!-- Lab Reflections Content -->
-        <div class="reflection-content" id="reflection">
-            <h2>📝 Reflection on Learning Data Structures and Algorithms</h2>
-            
-            <p>Throughout this course, I delved deep into fundamental data structures and algorithms, which are the backbone of efficient computing. Key topics I explored include Time Complexity Analysis, Binary Search Trees (BST), DFS and BFS, Heap Sorting, Pattern Searching, and Graph Algorithms. Here's a reflection on what I learned, the challenges I faced, and how I approached solving complex problems.</p>
-            
-            <h3>Key Concepts Learned</h3>
-            <ul>
-                <li><strong>Time Complexity Analysis:</strong> Time complexity analysis is essential for determining the efficiency of algorithms. By mastering Big-O notation, I learned how to evaluate the performance of algorithms, especially for large input sizes. The ability to analyze an algorithm's best, worst, and average-case complexities helps select the optimal approach for solving problems.</li>
-                
-                <pre>
-def bubble_sort(arr):
+        <h3>Course Outcome:</h3>
+        <p>By the end of the course, students will be able to design efficient algorithms, analyze their performance, and apply them to solve real-world problems effectively.</p>
+    </section>
+
+    <!-- Button to Display Reflections -->
+    <button id="reflectionBtn">View Lab Reflections</button>
+    
+    <!-- Reflection Section -->
+    <section id="reflectionContent" style="display:none;">
+        <h2>📖 Reflection on Learning Data Structures and Algorithms</h2>
+        <p>Throughout this course, I delved deep into fundamental data structures and algorithms, which are the backbone of efficient computing. Key topics I explored include <strong>Time Complexity Analysis</strong>, <strong>Binary Search Trees (BST)</strong>, <strong>DFS and BFS</strong>, <strong>Heap Sorting</strong>, <strong>Pattern Searching</strong>, and <strong>Graph Algorithms</strong>. Here's a reflection on what I learned, the challenges I faced, and how I approached solving complex problems.</p>
+
+        <h3>Key Concepts Learned</h3>
+        <h4>1. Time Complexity Analysis</h4>
+        <p>Time complexity analysis is essential for determining the efficiency of algorithms. By mastering <strong>Big-O notation</strong>, I learned how to evaluate the performance of algorithms, especially for large input sizes. The ability to analyze an algorithm's <strong>best, worst, and average-case</strong> complexities helps select the optimal approach for solving problems.</p>
+
+        <pre><code>def bubble_sort(arr):
     n = len(arr)
     for i in range(n):
         for j in range(0, n-i-1):
             if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-                </pre>
+                arr[j], arr[j+1] = arr[j+1], arr[j]</code></pre>
 
-                <li><strong>Binary Search Tree (BST):</strong> I gained a strong understanding of how BSTs allow efficient insertion, deletion, and search operations in logarithmic time. The main challenge was mastering tree traversal methods, both iterative and recursive, and understanding the importance of maintaining balance in the tree to ensure performance remains optimal.</li>
-                
-                <pre>
-class Node:
+        <h4>2. Binary Search Tree (BST)</h4>
+        <p>I gained a strong understanding of how <strong>BSTs</strong> allow efficient insertion, deletion, and search operations in logarithmic time. The main challenge was mastering tree traversal methods, both iterative and recursive, and understanding the importance of maintaining balance in the tree to ensure performance remains optimal.</p>
+
+        <pre><code>class Node:
     def __init__(self, key):
         self.left = None
         self.right = None
@@ -98,24 +115,22 @@ def insert(root, key):
         root.left = insert(root.left, key)
     else:
         root.right = insert(root.right, key)
-    return root
-                </pre>
+    return root</code></pre>
 
-                <li><strong>DFS and BFS:</strong> DFS is useful for exploring paths deeply, while BFS is efficient for finding the shortest path in unweighted graphs. I implemented both in various graph scenarios, such as finding connected components or shortest paths.</li>
-                
-                <pre>
-def dfs(graph, node, visited):
+        <h4>3. DFS and BFS</h4>
+        <p><strong>DFS</strong> is useful for exploring paths deeply, while <strong>BFS</strong> is efficient for finding the shortest path in unweighted graphs. I implemented both in various graph scenarios, such as finding connected components or shortest paths.</p>
+
+        <pre><code>def dfs(graph, node, visited):
     if node not in visited:
         print(node, end=" ")
         visited.add(node)
         for neighbor in graph[node]:
-            dfs(graph, neighbor, visited)
-                </pre>
+            dfs(graph, neighbor, visited)</code></pre>
 
-                <li><strong>Heap Sorting:</strong> Heap Sort introduced me to the importance of the heap data structure. I learned how the binary heap allows us to efficiently retrieve the smallest or largest element and perform sorting in O(n log n) time. The challenge was understanding how the heap property is maintained during insertions and deletions.</li>
-                
-                <pre>
-def heapify(arr, n, i):
+        <h4>4. Heap Sorting</h4>
+        <p><strong>Heap Sort</strong> introduced me to the importance of the heap data structure. I learned how the binary heap allows us to efficiently retrieve the smallest or largest element and perform sorting in <strong>O(n log n)</strong> time. The challenge was understanding how the heap property is maintained during insertions and deletions.</p>
+
+        <pre><code>def heapify(arr, n, i):
     largest = i
     left = 2 * i + 1
     right = 2 * i + 2
@@ -127,13 +142,12 @@ def heapify(arr, n, i):
 
     if largest != i:
         arr[i], arr[largest] = arr[largest], arr[i]
-        heapify(arr, n, largest)
-                </pre>
+        heapify(arr, n, largest)</code></pre>
 
-                <li><strong>Pattern Searching:</strong> I explored various algorithms for Pattern Searching, such as Knuth-Morris-Pratt (KMP), which is highly efficient for finding substrings in a larger string. These algorithms optimize the brute-force approach by reducing unnecessary comparisons.</li>
-                
-                <pre>
-def KMP_search(text, pattern):
+        <h4>5. Pattern Searching</h4>
+        <p>I explored various algorithms for <strong>Pattern Searching</strong>, such as <strong>Knuth-Morris-Pratt (KMP)</strong>, which is highly efficient for finding substrings in a larger string. These algorithms optimize the brute-force approach by reducing unnecessary comparisons.</p>
+
+        <pre><code>def KMP_search(text, pattern):
     lps = [0] * len(pattern)
     j = 0
     computeLPS(pattern, lps)
@@ -149,71 +163,17 @@ def KMP_search(text, pattern):
             if j != 0:
                 j = lps[j - 1]
             else:
-                i += 1
-                </pre>
+                i += 1</code></pre>
 
-                <li><strong>Graph Algorithms:</strong> I learned the importance of graphs in representing real-world relationships, such as social networks and transportation systems. Key algorithms like Dijkstra’s Algorithm for shortest path finding and Prim’s Algorithm for minimum spanning trees helped me understand the complexities involved in graph-based problems.</li>
-                
-                <pre>
-def dijkstra(graph, start):
-    shortest_paths = {start: (None, 0)}
-    current_node = start
-    while current_node is not None:
-        weight = shortest_paths[current_node][1]
-        for neighbor, w in graph[current_node].items():
-            path_weight = weight + w
-            if neighbor not in shortest_paths:
-                shortest_paths[neighbor] = (current_node, path_weight)
-            else:
-                current_weight = shortest_paths[neighbor][1]
-                if current_weight > path_weight:
-                    shortest_paths[neighbor] = (current_node, path_weight)
-        next_dest = None
-        smallest_weight = float('inf')
-        for node, paths in shortest_paths.items():
-            if paths[1] < smallest_weight:
-                smallest_weight = paths[1]
-                next_dest = node
-        current_node = next_dest
-    return shortest_paths
-                </pre>
-            </ul>
-
-            <h3>Challenges in Learning and Understanding</h3>
-            <ul>
-                <li><strong>Recursion in DFS and BFS:</strong> Recursion can sometimes be difficult to manage, especially in larger graphs where stack overflow can occur if not handled properly.</li>
-                <li><strong>Memory Management:</strong> In algorithms like Heap Sort and Graph Algorithms, efficiently managing memory and understanding the space complexity of the solution was often a challenge.</li>
-                <li><strong>Balancing Efficiency with Clarity:</strong> While implementing algorithms, there was a constant balance between writing code that is both efficient and easy to understand.</li>
-            </ul>
-
-            <h3>Challenges in Relating to Real-World Applications</h3>
-            <ul>
-                <li><strong>Scalability:</strong> While algorithms like BFS and DFS work well for small datasets, handling large-scale real-world data (e.g., social networks or traffic systems) requires more sophisticated methods.</li>
-                <li><strong>Concurrency:</strong> Many real-world systems require parallel or distributed computing, which complicates the implementation of algorithms like Dijkstra's and Prim's.</li>
-                <li><strong>Dynamic Data:</strong> Algorithms need to be adjusted to handle constantly changing, real-time data, like stock market trends or live social media feeds.</li>
-            </ul>
-
-            <h3>Approach to Solving Complex Problems</h3>
-            <ul>
-                <li><strong>Optimizing for Time and Space:</strong> I always ensure that the algorithm selected is optimal for both time and space. For instance, in pattern searching, choosing algorithms like KMP over brute force saves significant time on large inputs.</li>
-                <li><strong>Using Advanced Data Structures:</strong> In cases like Graph Algorithms, using data structures such as priority queues and disjoint sets can greatly improve the efficiency of algorithms.</li>
-                <li><strong>Iterative Improvements:</strong> I often start with a brute force solution and iteratively improve the approach by reducing time complexity through dynamic programming, memoization, or advanced algorithmic techniques.</li>
-            </ul>
-
-            <p>Through this course, I gained a deeper understanding of data structures and algorithms, and I am now better equipped to solve real-world computational problems with efficiency and precision.</p>
-        </div>
+        <h4>6. Graph Algorithms</h4>
+        <p>I learned the importance of <strong>graphs</strong> in representing real-world relationships, such as social networks and transportation systems. Key algorithms like <strong>Dijkstra’s Algorithm</strong> for shortest path finding and <strong>Prim’s Algorithm</strong> for minimum spanning trees helped me understand the complexities involved in graph-based problems.</p>
     </section>
 
     <script>
-        function toggleReflection() {
-            var reflection = document.getElementById("reflection");
-            if (reflection.style.display === "none" || reflection.style.display === "") {
-                reflection.style.display = "block";
-            } else {
-                reflection.style.display = "none";
-            }
+        document.getElementById('reflectionBtn').onclick = function() {
+            var reflectionContent = document.getElementById('reflectionContent');
+            reflectionContent.style.display = reflectionContent.style.display === 'none' ? 'block' : 'none';
         }
     </script>
-
 </body>
 </html>

@@ -8,68 +8,72 @@
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
-    display: flex;
-    flex-direction: column; /* Ensure vertical stacking */
-    align-items: center;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
     padding: 20px;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+    justify-content: flex-start;
+    align-items: center;
     min-height: 100vh;
 }
 
-/* Main Section Container */
+/* Section Container */
 section {
-    background-color: white;
-    padding: 2rem;
+    background-color: #1e1e1e;
+    padding: 20px;
     width: 90%;
     max-width: 800px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Adds space between sections */
     border-radius: 8px;
-    margin-bottom: 20px;
-    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Header Section */
+/* Header Styling */
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 header h1 {
     font-size: 2rem;
-    margin: 0;
+    color: #4CAF50;
+    margin-bottom: 10px;
 }
 
 header p {
-    margin: 1rem 0 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    color: #c7c7c7;
 }
 
-/* Section Titles */
+/* Section Headings */
 h2 {
     color: #4CAF50;
-    margin-bottom: 1rem;
     font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
-/* Paragraph Styling */
-p {
-    margin: 1rem 0;
-    color: #555;
-    font-size: 1rem;
-    line-height: 1.6;
+/* Lists */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #c7c7c7;
 }
 
-/* Button Styling */
+li {
+    margin-bottom: 10px;
+}
+
+/* Buttons */
 .button-container {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
 }
 
 .toggle-btn {
-    display: inline-block;
-    margin: 10px;
+    margin: 0 10px;
     padding: 10px 20px;
     font-size: 1rem;
     font-weight: 600;
@@ -78,21 +82,28 @@ p {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s ease;
 }
 
 .toggle-btn:hover {
     background: #388E3C;
 }
 
+/* Links */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
     section {
-        padding: 1.5rem;
-    }
-
-    header {
-        padding: 1.5rem;
+        padding: 15px;
     }
 
     .toggle-btn {

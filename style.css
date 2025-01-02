@@ -10,10 +10,8 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f5f5f5;
     margin: 0;
-    padding: 20px; /* Adding padding to the body to prevent sticking at the top */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Aligns content towards the top */
+    padding: 20px; /* Padding to prevent sticking at the top */
+    display: block; /* Ensure sections stack vertically */
     min-height: 100vh;
 }
 
@@ -26,7 +24,7 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: center;
-    margin-top: 30px; /* Adding margin to ensure there's space from the top */
+    margin: 30px auto; /* Add margin to separate sections */
 }
 
 /* Header */
@@ -127,4 +125,3 @@ blockquote {
 .toggle-btn:hover {
     background: #388E3C;
 }
-

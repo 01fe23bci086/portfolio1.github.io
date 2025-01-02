@@ -79,11 +79,11 @@
         <p>By the end of the course, students will be able to design efficient algorithms, analyze their performance, and apply them to solve real-world problems effectively.</p>
     </section>
 
-    <!-- Button to Display Reflections -->
-    <button id="reflectionBtn" style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">View Lab Reflections</button>
+    <!-- Button to Display Both Theory and Lab Reflections -->
+    <button id="toggleReflectionsBtn" style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">Toggle Both Reflections</button>
     
-    <!-- Reflection Section -->
-    <section id="reflectionContent" style="display: none;">
+    <!-- Lab Reflection Section -->
+    <section id="labReflectionContent" style="display: none;">
         <h2>📖 Reflection on Learning Data Structures and Algorithms</h2>
         <p>Throughout this course, I delved deep into fundamental data structures and algorithms, which are the backbone of efficient computing. Key topics I explored include <strong>Time Complexity Analysis</strong>, <strong>Binary Search Trees (BST)</strong>, <strong>DFS and BFS</strong>, <strong>Heap Sorting</strong>, <strong>Pattern Searching</strong>, and <strong>Graph Algorithms</strong>. Here's a reflection on what I learned, the challenges I faced, and how I approached solving complex problems.</p>
 
@@ -193,49 +193,55 @@ def dijkstra(graph, start):
 
         <h3>Approach and Strategy</h3>
         <p>My approach involved a balance of theory and practical implementation. After understanding the theoretical foundations, I would try to implement each algorithm from scratch, and debug my code thoroughly. Working on different problems helped me consolidate my understanding and improve my problem-solving skills.</p>
+    </section>
 
-        <!-- Theory Learning Reflection Section with Toggle Button -->
-        <button id="toggleTheoryReflection" style="background-color: blue; color: white; padding: 10px 20px; border: none; cursor: pointer;">Toggle Theory Reflections</button>
+    <!-- Theory Reflection Section -->
+    <section id="theoryReflectionContent" style="display: none;">
+        <h2>📖 Reflection on Learning Theory in Design Analysis and Algorithm</h2>
+        <p>This course has provided me with a comprehensive understanding of the theoretical aspects of algorithm design. From <strong>time and space complexity analysis</strong> to the understanding of different algorithmic paradigms like <strong>divide and conquer</strong>, <strong>dynamic programming</strong>, and <strong>greedy algorithms</strong>, I have gained the ability to choose and apply the right approach based on the problem at hand.</p>
 
-        <section id="theoryReflection" style="display: none;">
-            <h2>📖 Reflection on Learning Theory in Design Analysis and Algorithm</h2>
-            <p>This course has provided me with a comprehensive understanding of the theoretical aspects of algorithm design. From <strong>time and space complexity analysis</strong> to the understanding of different algorithmic paradigms like <strong>divide and conquer</strong>, <strong>dynamic programming</strong>, and <strong>greedy algorithms</strong>, I have gained the ability to choose and apply the right approach based on the problem at hand.</p>
+        <h3>Key Theory Learned</h3>
+        <h4>1. Time and Space Complexity Analysis</h4>
+        <p>Understanding the Big-O notation was crucial for comparing algorithms. Learning how to analyze algorithms in terms of their efficiency and scalability was a significant aspect of my learning in this course.</p>
 
-            <h3>Key Theory Learned</h3>
-            <h4>1. Time and Space Complexity Analysis</h4>
-            <p>Understanding the Big-O notation was crucial for comparing algorithms. Learning how to analyze algorithms in terms of their efficiency and scalability was a significant aspect of my learning in this course.</p>
+        <h4>2. Problem-Solving Paradigms</h4>
+        <p>I learned the importance of selecting the right problem-solving paradigm. For example, using the <strong>divide and conquer</strong> approach was particularly useful for problems like matrix multiplication and mergesort, whereas dynamic programming was essential for optimization problems like the knapsack problem.</p>
 
-            <h4>2. Problem-Solving Paradigms</h4>
-            <p>I learned the importance of selecting the right problem-solving paradigm. For example, using the <strong>divide and conquer</strong> approach was particularly useful for problems like matrix multiplication and mergesort, whereas dynamic programming was essential for optimization problems like the knapsack problem.</p>
+        <h4>3. Algorithm Design and Optimization</h4>
+        <p>Through various assignments, I learned how to design algorithms by identifying key problems and constraints. By applying optimization techniques, I was able to reduce the time complexity and improve the performance of algorithms.</p>
 
-            <h4>3. Algorithm Design and Optimization</h4>
-            <p>Through various assignments, I learned how to design algorithms by identifying key problems and constraints. By applying optimization techniques, I was able to reduce the time complexity and improve the performance of algorithms.</p>
-        </section>
+        <h4>4. Greedy Algorithms</h4>
+        <p>I developed an understanding of <strong>greedy algorithms</strong> and how they focus on making the locally optimal choice at each step. Although they do not always provide the optimal solution, they are highly efficient for many real-world problems.</p>
+
+        <h4>5. Graph Theory</h4>
+        <p>Studying graph algorithms like <strong>DFS, BFS, Dijkstra's Algorithm</strong>, and <strong>Prim's Algorithm</strong> introduced me to the concept of graph traversal and shortest path problems. This knowledge has been invaluable in solving problems related to routing, connectivity, and optimization.</p>
     </section>
 
     <script>
-        const reflectionBtn = document.getElementById('reflectionBtn');
-        const reflectionContent = document.getElementById('reflectionContent');
-        const toggleTheoryReflectionBtn = document.getElementById('toggleTheoryReflection');
-        const theoryReflectionContent = document.getElementById('theoryReflection');
+        const toggleReflectionsBtn = document.getElementById('toggleReflectionsBtn');
+        const labReflectionContent = document.getElementById('labReflectionContent');
+        const theoryReflectionContent = document.getElementById('theoryReflectionContent');
+        const toggleTheoryReflection = document.getElementById('toggleTheoryReflection');
 
-        reflectionBtn.addEventListener('click', () => {
-            if (reflectionContent.style.display === 'none') {
-                reflectionContent.style.display = 'block';
-                reflectionBtn.textContent = 'Hide Lab Reflections';
+        toggleReflectionsBtn.addEventListener('click', () => {
+            if (labReflectionContent.style.display === 'none' && theoryReflectionContent.style.display === 'none') {
+                labReflectionContent.style.display = 'block';
+                theoryReflectionContent.style.display = 'block';
+                toggleReflectionsBtn.textContent = 'Hide Both Reflections';
             } else {
-                reflectionContent.style.display = 'none';
-                reflectionBtn.textContent = 'View Lab Reflections';
+                labReflectionContent.style.display = 'none';
+                theoryReflectionContent.style.display = 'none';
+                toggleReflectionsBtn.textContent = 'Show Both Reflections';
             }
         });
 
-        toggleTheoryReflectionBtn.addEventListener('click', () => {
+        toggleTheoryReflection.addEventListener('click', () => {
             if (theoryReflectionContent.style.display === 'none') {
                 theoryReflectionContent.style.display = 'block';
-                toggleTheoryReflectionBtn.textContent = 'Hide Theory Reflections';
+                toggleTheoryReflection.textContent = 'Hide Theory Reflections';
             } else {
                 theoryReflectionContent.style.display = 'none';
-                toggleTheoryReflectionBtn.textContent = 'Toggle Theory Reflections';
+                toggleTheoryReflection.textContent = 'Show Theory Reflections';
             }
         });
     </script>

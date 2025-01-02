@@ -15,6 +15,7 @@ body {
     justify-content: center;
     align-items: flex-start; /* Aligns content towards the top */
     min-height: 100vh;
+    flex-direction: column; /* Stacks the sections vertically */
 }
 
 /* Main Container */
@@ -27,6 +28,7 @@ section {
     border-radius: 8px;
     text-align: center;
     margin-top: 30px; /* Adding margin to ensure there's space from the top */
+    margin-bottom: 30px; /* Adding margin between sections */
 }
 
 /* Header */
@@ -127,4 +129,28 @@ blockquote {
 .toggle-btn:hover {
     background: #388E3C;
 }
-This is my css code
+
+/* Additional Styling for Portfolio Sections */
+.portfolio-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.portfolio-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Section-specific Styles */
+#labReflectionContent,
+#theoryReflectionContent {
+    display: none;
+}
+
+/* Spacing Between Sections */
+section:not(header) {
+    margin-top: 20px;
+}

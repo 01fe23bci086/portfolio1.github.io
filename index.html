@@ -81,8 +81,8 @@
 
     <!-- Buttons for Theory and Lab Reflections -->
     <section>
-        <button id="toggleLabReflectionBtn" style="background-color: blue; color: white; padding: 10px 20px; border: none; cursor: pointer;">Toggle Lab Reflections</button>
-        <button id="toggleTheoryReflectionBtn" style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">Toggle Theory Reflections</button>
+        <button id="toggleLabReflectionBtn" style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">click for Lab Reflections</button>
+        <button id="toggleTheoryReflectionBtn" style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">click for Theory Reflections</button>
     </section>
 
     <!-- Lab Reflection Section -->
@@ -211,6 +211,16 @@ def dijkstra(graph, start):
             <li>Graph Algorithms: Understanding how to represent and manipulate graphs to solve real-world problems.</li>
         </ul>
 
+        <h3>Theory Learning Outcomes</h3>
+        <p>By the end of this course, I am able to:</p>
+        <ul>
+            <li>Understand and apply the principles of algorithm design.</li>
+            <li>Evaluate the efficiency of algorithms using time and space complexity.</li>
+            <li>Implement various algorithms such as sorting, searching, and graph traversal.</li>
+            <li>Identify appropriate problem-solving strategies, such as divide and conquer or dynamic programming, for different scenarios.</li>
+            <li>Understand the importance of selecting the right algorithm for different data structures and problem contexts.</li>
+        </ul>
+
         <h3>Challenges Faced</h3>
         <p>One of the biggest challenges was understanding the complexity analysis in real-world applications. Time complexity in theoretical scenarios doesn’t always map perfectly to real-world performance due to factors like system architecture, input size, and optimization strategies.</p>
 
@@ -228,10 +238,12 @@ def dijkstra(graph, start):
         const theoryReflectionContent = document.getElementById('theoryReflectionContent');
 
         toggleLabReflectionBtn.addEventListener('click', () => {
+            theoryReflectionContent.style.display = 'none';
             labReflectionContent.style.display = labReflectionContent.style.display === 'none' ? 'block' : 'none';
         });
 
         toggleTheoryReflectionBtn.addEventListener('click', () => {
+            labReflectionContent.style.display = 'none';
             theoryReflectionContent.style.display = theoryReflectionContent.style.display === 'none' ? 'block' : 'none';
         });
     </script>

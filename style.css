@@ -12,56 +12,45 @@ body {
     margin: 0;
     padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     min-height: 100vh;
 }
 
-/* Container to hold both sides */
-.container {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    width: 90%;
-    max-width: 1200px;
+/* Intro Section */
+.intro-section {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-/* Left Side - Introduction */
-.left-side {
-    flex: 1;
-    text-align: left;
-}
-
-.left-side h1 {
+.intro-section h1 {
     font-size: 2rem;
     color: #4CAF50;
     margin-bottom: 10px;
 }
 
-.left-side p {
+.intro-section p {
     font-size: 1rem;
     color: #555;
-}
-
-/* Right Side - Content Section */
-.right-side {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
 }
 
 /* Projects Section */
 .projects-section {
     background-color: white;
     padding: 2rem;
+    width: 90%;
+    max-width: 1000px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
 .projects-section h2 {
     color: #4CAF50;
     margin-bottom: 20px;
+    font-size: 1.5rem;
 }
 
 .projects-list {
@@ -89,65 +78,8 @@ body {
     color: #666;
 }
 
-/* About the Course Section */
-.about-course {
-    background-color: white;
-    padding: 2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-bottom: 30px;
-}
-
-.about-course h2 {
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
-
-/* Lab and Theory Reflections Section */
-.reflections {
-    background-color: white;
-    padding: 2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.reflections h2 {
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
-
-/* Reflection Buttons */
-.reflections-toggle {
-    display: flex;
-    gap: 20px;
-}
-
-.toggle-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.toggle-btn:hover {
-    background-color: #388E3C;
-}
-
-/* Reflection Content */
-.reflection-content {
-    margin-top: 20px;
-}
-
 /* Responsive Design */
-@media (max-width: 800px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
+@media (max-width: 600px) {
     .projects-list {
         flex-direction: column;
     }

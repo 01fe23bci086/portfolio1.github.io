@@ -1,117 +1,56 @@
-/* Reset default margin and padding */
-* {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Global Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #121212;
-    color: #fff;
-    margin: 0;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    display: flex;
-    flex-direction: column; /* Ensure content stacks vertically */
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 100vh;
 }
 
-/* Section Container */
-section {
-    background-color: #1e1e1e;
-    padding: 20px;
-    width: 90%;
-    max-width: 800px;
-    margin-bottom: 20px; /* Adds space between sections */
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Header Styling */
 header {
     text-align: center;
     margin-bottom: 20px;
 }
 
 header h1 {
-    font-size: 2rem;
-    color: #4CAF50;
-    margin-bottom: 10px;
+    font-size: 2.5em;
+    color: #333;
 }
 
-header p {
-    font-size: 1.1rem;
-    color: #c7c7c7;
+main {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Section Headings */
+section {
+    margin-bottom: 30px;
+}
+
 h2 {
-    color: #4CAF50;
-    font-size: 1.5rem;
+    font-size: 2em;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
     margin-bottom: 15px;
 }
 
-/* Highlighted Text Blocks */
-.highlight {
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-/* Text Styling */
 p {
-    color: #c7c7c7;
+    font-size: 1.1em;
     line-height: 1.6;
-    margin-bottom: 10px;
+    color: #555;
 }
 
-/* Buttons */
-.button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+ul {
+    list-style-type: square;
+    margin-left: 20px;
 }
 
-.toggle-btn {
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-    background: #4CAF50;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.toggle-btn:hover {
-    background: #388E3C;
-}
-
-/* Links */
-a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    section {
-        padding: 15px;
-    }
-
-    .toggle-btn {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
+ul li {
+    font-size: 1.1em;
+    color: #555;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-      <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -193,11 +193,31 @@ def dijkstra(graph, start):
 
         <h3>Approach and Strategy</h3>
         <p>My approach involved a balance of theory and practical implementation. After understanding the theoretical foundations, I would try to implement each algorithm from scratch, and debug my code thoroughly. Working on different problems helped me consolidate my understanding and improve my problem-solving skills.</p>
+
+        <!-- Theory Learning Reflection Section with Toggle Button -->
+        <button id="toggleTheoryReflection" style="background-color: blue; color: white; padding: 10px 20px; border: none; cursor: pointer;">Toggle Theory Reflections</button>
+
+        <section id="theoryReflection" style="display: none;">
+            <h2>📖 Reflection on Learning Theory in Design Analysis and Algorithm</h2>
+            <p>This course has provided me with a comprehensive understanding of the theoretical aspects of algorithm design. From <strong>time and space complexity analysis</strong> to the understanding of different algorithmic paradigms like <strong>divide and conquer</strong>, <strong>dynamic programming</strong>, and <strong>greedy algorithms</strong>, I have gained the ability to choose and apply the right approach based on the problem at hand.</p>
+
+            <h3>Key Theory Learned</h3>
+            <h4>1. Time and Space Complexity Analysis</h4>
+            <p>Understanding the Big-O notation was crucial for comparing algorithms. Learning how to analyze algorithms in terms of their efficiency and scalability was a significant aspect of my learning in this course.</p>
+
+            <h4>2. Problem-Solving Paradigms</h4>
+            <p>I learned the importance of selecting the right problem-solving paradigm. For example, using the <strong>divide and conquer</strong> approach was particularly useful for problems like matrix multiplication and mergesort, whereas dynamic programming was essential for optimization problems like the knapsack problem.</p>
+
+            <h4>3. Algorithm Design and Optimization</h4>
+            <p>Through various assignments, I learned how to design algorithms by identifying key problems and constraints. By applying optimization techniques, I was able to reduce the time complexity and improve the performance of algorithms.</p>
+        </section>
     </section>
 
     <script>
         const reflectionBtn = document.getElementById('reflectionBtn');
         const reflectionContent = document.getElementById('reflectionContent');
+        const toggleTheoryReflectionBtn = document.getElementById('toggleTheoryReflection');
+        const theoryReflectionContent = document.getElementById('theoryReflection');
 
         reflectionBtn.addEventListener('click', () => {
             if (reflectionContent.style.display === 'none') {
@@ -206,6 +226,16 @@ def dijkstra(graph, start):
             } else {
                 reflectionContent.style.display = 'none';
                 reflectionBtn.textContent = 'View Lab Reflections';
+            }
+        });
+
+        toggleTheoryReflectionBtn.addEventListener('click', () => {
+            if (theoryReflectionContent.style.display === 'none') {
+                theoryReflectionContent.style.display = 'block';
+                toggleTheoryReflectionBtn.textContent = 'Hide Theory Reflections';
+            } else {
+                theoryReflectionContent.style.display = 'none';
+                toggleTheoryReflectionBtn.textContent = 'Toggle Theory Reflections';
             }
         });
     </script>
